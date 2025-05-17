@@ -1,12 +1,14 @@
 # 开始PX4的开发
 官方教程：https://docs.px4.io/main/zh/development/development.html
+
 源代码：https://github.com/PX4/PX4-Autopilot
+
 参考：https://gitcode.csdn.net/662f74c8ef0d142cbb2c8249.html
 
 ## 从代码结构入手
 进入源代码目录，可以看到以下主要目录
 ### boards
-borads 文件夹是各个品牌版本的飞控的编译脚本，其中px4文件夹壮的是pixhawk的原生固件的编译脚本和配置
+borads 文件夹是各个品牌版本的飞控的编译脚本，其中px4文件夹壮的是pixhawk的原生固件的编译脚本和配置。
 这些编译脚本和配置决定了哪些驱动文件、功能模块会被编译进固件。如果见出现固件大小过大无法烧录的问题，则可以在这里进行固件裁剪
 
 ### build
@@ -34,7 +36,12 @@ rc.mc_apps: 启动上层应用Attitude/Position estimator, Attitude/Position con
 
 ### src
 源代码目录，PX4的核心业务代码
-drivers：传感器驱动代码，包括陀螺仪、加速度计、磁力计、气压计、GPS、等
+
+drivers：传感器驱动代码，包括陀螺仪、加速度计、磁力计、气压计、GPS等
+
 examples：官方给出的简单例程，方便开发者入门开发
+
 lib：标准库，有矩阵计算、pid控制、传感器校准等算法
+
 modules：功能模块文件夹，这里是姿态解算、姿态控制、位置估计、位置控制、落地检测、传感器初始化等模块。
+
